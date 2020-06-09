@@ -15,4 +15,4 @@ then
 fi
 
 # 启动Docker容器
-docker run -d -p 80:3000 --name $CONTAINER_NAME $IMAGE_NAME:1.0.0 
+docker run -p 80:3000 --name $CONTAINER_NAME $IMAGE_NAME:1.0.0 
