@@ -9,7 +9,7 @@ log.info('listen in 3000')
 const template = body(
   { style: { color: color.blue } },
   h1({ style: { color: color.red } }, 'Hello Google'),
-  p('Deno Server'),
+  p('Deno Server 1.1'),
 );
 for await (const req of s) {
   req.respond({
