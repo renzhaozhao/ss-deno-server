@@ -8,4 +8,4 @@ WORKDIR /opt
 COPY . /opt
 
 # 运行命令
-CMD ["run", "--allow-net", "deno.ts"]
+CMD ["run", "--allow-net", "app.ts"]
