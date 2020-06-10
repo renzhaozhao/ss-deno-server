@@ -3,7 +3,7 @@ import { body, h1, p } from 'https://deno.land/x/ssr/index.ts'
 import color from 'https://deno.land/x/colors/index.ts'
 import * as log from 'https://deno.land/std/log/mod.ts'
 
-const s = serve({ port: 3000 }
+const server = serve({ port: 3000 })
 log.info('listen in 3000')
 
 const template = body(
@@ -11,7 +11,7 @@ const template = body(
   h1({ style: { color: color.red } }, 'Hello Google'),
   p('Deno Server 1.1'),
 );
-for await (const req of s) {
+for await (const req of server) {
   req.respond({
     body: template,
   })
