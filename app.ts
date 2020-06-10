@@ -6,10 +6,12 @@ import * as log from 'https://deno.land/std/log/mod.ts'
 const server = serve({ port: 3000 })
 log.info('listen in 3000')
 
+const version = '1.2'
+
 const template = body(
   { style: { color: color.blue } },
   h1({ style: { color: color.red } }, 'Hello Google'),
-  p('Deno Server 1.1'),
+  p(`Deno Server ${version}`),
 );
 for await (const req of server) {
   req.respond({
